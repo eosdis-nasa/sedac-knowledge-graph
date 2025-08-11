@@ -1,7 +1,10 @@
 import json
 #This is the user and password for my Project 2 instance
 from neo4j import GraphDatabase
-AUTH = ('neo4j', 'Th3pr0j3ct2ishere!')
+# graph.py
+from auth import AUTH
+
+# ... your code using username and password ...
 
 with GraphDatabase.driver("neo4j://127.0.0.1:7687", auth=AUTH) as driver:
     driver.verify_connectivity()
